@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="ui-mobile-rendering">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css"/>
+
+    <!-- The Templates -->
+    <script type="text/template" id="home">
+
+        <div data-role="header">
+            <h1>Asthma Diagonsis</h1>
+      </div>
+  
+      <div role="main" class="ui-content">
+            <h2>Select a Management Area:</h2>
+            <ul data-role="listview" data-inset="true">
+                  <li><a href="#generalPractice" class="hospital">(GP) General Practice</a></li>
+            </ul>
+
+            <h2>Jump to Section:</h2>
+            <ul data-role="listview" data-inset="true">
+                  <li><a href="#immediateAction" class="">Immediate Action</a></li>
+                  <li><a href="#considerAdmission" class="">Consider Admission</a></li>
+                  <li><a href="#treatAtHome" class="">Treat at Home</a></li>
+            </ul>
+      </div>
+
+    </script>
+
+    <script type="text/template" id="generalPractice">
+
+        <div data-role="header">
+            <h1>General Practice</h1>
+      </div>
+
+      <div role="main" class="ui-content">
+
+          <div data-role="fieldcontain">
+            <label for="PEF">PEF %:</label>
+            <input type="number" name="PEF" id="PEF" value=""  />
+          <div data-role="fieldcontain">
+
+          <div data-role="fieldcontain">
+            <label for="SpO2">SpO&#8322; %:</label>
+            <input type="number" name="SpO2" id="SpO2" value=""  />
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="Breaths">Breaths/Min:</label>
+            <input type="number" name="Breaths" id="Breaths" value=""  />
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="speech" class="ui-select">Speech:</label>
+              <select id="Speech">
+                <option value="Normal">Normal</option>
+                <option value="Laboured">Cant complete sentences</option>
+                <option value="Silent">Silent Chest, cyanosis, poor respitory effort</option>
+              </select>
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="pulse">Pulse beats/min:</label>
+            <input type="number" name="pulse" id="pulse" value=""  />
+          </div>
+
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+              <legend>Other Symptoms:</legend>
+              
+              <label for="Arrhythmia">
+              <input type="checkbox" name="arrhythmia" id="arrhythmia"/>
+              Arrhythmia</label>
+
+              <label for="Hypotension">
+              <input type="checkbox" name="hypotension" id="hypotension"></input>
+              Hypotension</label>
+              
+              <label for="Exhaustion">
+              <input type="checkbox" name="exhaustion" id="exhaustion"></input>
+              Exhaustion</label>
+            
+              <label for="alteredConsciousness1">
+              <input type="checkbox" name="alteredConsciousness" id="alteredConsciousness"></input>
+              Altered Consciousness</label>
+            </fieldset>
+          </div>
+
+          <input type="submit" id="nextPage" value="Next"/>
+
+      </div>
+
+    </script>
+
+    <script type="text/template" id="immediateActionResult">
+
+      <div data-role="header">
+          <h1>Arrange Immediate Action</h1>
+      </div>
+  
+      <div role="main" class="ui-content">
+        <ul>        
+          <li>&beta;<sub>2</sub> bronchodilator: 
+            <ul>
+              <li>Via spacer (give 4 puffs initially and give a further 2 puffs every 2 minutes according to response up to maximum of 10 puffs)</li>
+            </ul>
+          </li>
+        </ul>  
+
+        If PEF > 50-75% predicted/best:
+
+        <ul>
+          <li>nebuliser (preferably oxygen driven) (salbutamol 5 mg or terbutaline 10 mg)</li>
+          <li>Give prednisolone 40-50 mg</li>
+          <li>Continue or step up usual treatment</li>
+        </ul>
+
+
+        If good response to first treatment
+        <p><i>(symptoms improved, respiration and pulse settling and PEF >50%) continue or step up usual treatment and continue prednisolone</i></p>
+      </div>
+
+    </script>
+
+    <script type="text/template" id="considerAdmissionResult">
+
+      <div data-role="header">
+          <h1>Consider Admission</h1>
+      </div>
+  
+      <div role="main" class="ui-content">
+        <ul>
+          <li>Oxygen to maintain SpO<sub>2</sub> 94-98% if available</li>
+
+          <li>&beta;<sub>2</sub> bronchodilator:
+            <ul>
+              <li>nebuliser (preferably oxygen
+driven) (salbutamol 5 mg or terbutaline 10 mg)</li>
+              <li>Or via spacer (give 4 puffs initially and give a further 2 puffs every 2 minutes according to response up to maximum of 10 puffs)</li>
+            </ul>
+          </li>
+
+          <li>Prednisolone 40-50 mg or IV hydrocortisone 100 mg</li>
+          <li><b>If no response in acute severe asthma: ADMIT</b></li>
+        </ul>
+      </div>
+
+    </script>
+
+    <script type="text/template" id="treatAtHomeResult">
+
+      <div data-role="header">
+          <h1>Treat At Home</h1>
+      </div>
+  
+      <div role="main" class="ui-content">
+        <ul>
+          <li>Oxygen to maintain SpO<sub>2</sub> 94-98%</li>
+
+          <li>&beta;<sub>2</sub> bronchodilator and
+ipratropium:
+            <ul>
+              <li>nebuliser (preferably oxygen driven) (salbutamol 5 mg
+or terbutaline 10 mg) and (ipratropium 0.5mg)</li>
+              <li>Or via spacer (give 4 puffs initially and give a further 2 puffs every 2 minutes according to response up to maximum of 10 puffs)</li>
+            </ul>
+          </li>
+
+          <li>Prednisolone 40-50 mg or IV hydrocortisone 100 mg immediately</li>
+        </ul>
+      </div>
+
+    </script>
+
+    <!-- The Scripts -->
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <script src="js/jqm-config.js"></script>
+    <script src="lib/jquery.mobile-1.3.2.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/backbone-min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body></body>
+
+</html>
