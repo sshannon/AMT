@@ -3,7 +3,9 @@
 <head>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css"/>
+    <link rel="stylesheet" href="css/theme.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.1.min.css"/>
 
     <!-- The Templates -->
     <script type="text/template" id="home">
@@ -39,7 +41,7 @@
           <div data-role="fieldcontain">
             <label for="PEF">PEF %:</label>
             <input type="number" name="PEF" id="PEF" value=""  />
-          <div data-role="fieldcontain">
+          </div>
 
           <div data-role="fieldcontain">
             <label for="SpO2">SpO&#8322; %:</label>
@@ -100,22 +102,32 @@
       </div>
   
       <div role="main" class="ui-content">
-        <ul>        
-          <li>&beta;<sub>2</sub> bronchodilator: 
+
+        <div class="ui-corner-all">
+          <div class="ui-bar ui-bar-a">
+            <h3>&beta;<sub>2</sub> bronchodilator: </h3>
+          </div>
+          <div class="ui-body ui-body-a">
+            <p>Via spacer (give 4 puffs initially and give a further 2 puffs every 2 minutes according to response up to maximum of 10 puffs)</p>
+          </div>
+        </div> 
+
+        <br>
+
+        <div class="ui-corner-all">
+          <div class="ui-bar ui-bar-a">
+            <h3>If PEF > 50-75% predicted/best:</h3>
+          </div>
+          <div class="ui-body ui-body-a">
             <ul>
-              <li>Via spacer (give 4 puffs initially and give a further 2 puffs every 2 minutes according to response up to maximum of 10 puffs)</li>
+              <li>nebuliser (preferably oxygen driven) (salbutamol 5 mg or terbutaline 10 mg)</li>
+              <li>Give prednisolone 40-50 mg</li>
+              <li>Continue or step up usual treatment</li>
             </ul>
-          </li>
-        </ul>  
+          </div>
+        </div>
 
-        If PEF > 50-75% predicted/best:
-
-        <ul>
-          <li>nebuliser (preferably oxygen driven) (salbutamol 5 mg or terbutaline 10 mg)</li>
-          <li>Give prednisolone 40-50 mg</li>
-          <li>Continue or step up usual treatment</li>
-        </ul>
-
+        <br>
 
         If good response to first treatment
         <p><i>(symptoms improved, respiration and pulse settling and PEF >50%) continue or step up usual treatment and continue prednisolone</i></p>
@@ -130,7 +142,8 @@
       </div>
   
       <div role="main" class="ui-content">
-        <ul>
+        <div class="ui-body ui-body-a ui-corner-all">
+          <ul>
           <li>Oxygen to maintain SpO<sub>2</sub> 94-98% if available</li>
 
           <li>&beta;<sub>2</sub> bronchodilator:
@@ -143,7 +156,8 @@ driven) (salbutamol 5 mg or terbutaline 10 mg)</li>
 
           <li>Prednisolone 40-50 mg or IV hydrocortisone 100 mg</li>
           <li><b>If no response in acute severe asthma: ADMIT</b></li>
-        </ul>
+        </ul>              
+        </div>
       </div>
 
     </script>
@@ -153,9 +167,10 @@ driven) (salbutamol 5 mg or terbutaline 10 mg)</li>
       <div data-role="header">
           <h1>Treat At Home</h1>
       </div>
-  
+
       <div role="main" class="ui-content">
-        <ul>
+        <div class="ui-body ui-body-a ui-corner-all">
+          <ul>
           <li>Oxygen to maintain SpO<sub>2</sub> 94-98%</li>
 
           <li>&beta;<sub>2</sub> bronchodilator and
@@ -168,7 +183,8 @@ or terbutaline 10 mg) and (ipratropium 0.5mg)</li>
           </li>
 
           <li>Prednisolone 40-50 mg or IV hydrocortisone 100 mg immediately</li>
-        </ul>
+        </ul>           
+        </div>
       </div>
 
     </script>
@@ -176,7 +192,7 @@ or terbutaline 10 mg) and (ipratropium 0.5mg)</li>
     <!-- The Scripts -->
     <script src="lib/jquery-1.10.2.min.js"></script>
     <script src="js/jqm-config.js"></script>
-    <script src="lib/jquery.mobile-1.3.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.1.min.js"></script>
     <script src="lib/underscore-min.js"></script>
     <script src="lib/backbone-min.js"></script>
     <script src="js/main.js"></script>
